@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS links -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind-dark.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>IOSC i3 | USAR</title>
+</head>
+<body class="bg-white dark:bg-black text-gray-800 dark:text-white">
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-text">
+            <!-- Loading animation -->
+            <span class="loading-text-words">L</span>
+            <span class="loading-text-words">O</span>
+            <span class="loading-text-words">A</span>
+            <span class="loading-text-words">D</span>
+            <span class="loading-text-words">I</span>
+            <span class="loading-text-words">N</span>
+            <span class="loading-text-words">G</span>
+        </div>
+    </div>
+
+    <!-- Content after Loading -->
+    <div class="content-after-loading">
+        <header class="text-center mb-4">
+            <h1 class="text-3xl font-bold text-amoled-green text-center mt-8 mb-4">Welcome to IOSC USAR!</h1>
+            <p class="text-gray-600 dark:text-white text-sm text-center mb-8">i3 Software Development Task</p>
+        </header>
+        <div class="min-h-screen flex flex-col items-center mt-4">
+            <div class="form-container">
+                <h1 class="text-3xl font-bold text-center mb-4">Form Auth Pane</h1>
+                <div class="switch-buttons">
+                    <!-- Login and Register buttons -->
+                    <button id="loginButton" class="toggle-button active">Login</button>
+                    <butThis web application includes user-friendly login and registration forms, a dark mode toggle, and a customization feature. It serves as a versatile starting point for creating web apps. Clone, customize, and contribute to this open-source project under the MIT License, leveraging popular web development libraries like Tailwind CSS, Tailwind Dark Mode, and FontAwesome. Explore, adapt, and make it your own!ton id="registerButton" class="toggle-button">Register</button>
+                </div>
+
+                <!-- Login Form -->
+                <div id="loginFormFields" class="hidden">
+                    <div class="mb-4">
+                        <label for="loginEmail" class="block text-gray-600 dark:text-white">Username/Email</label>
+                        <input type="text" id="loginEmail" name="loginEmail" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="loginPassword" class="block text-gray-600 dark:text-white">Password</label>
+                        <input type="password" id="loginPassword" name="loginPassword" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <button id="loginSubmitButton" class="w-full submit-button hover:bg-blue-600 transition duration-300">Login</button>
+                </div>
+
+                <!-- Registration Form -->
+                <div id="registerFormFields" class="hidden">
+                    <div class="mb-4">
+                        <label for="fullName" class="block text-gray-600 dark:text-white">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="username" class="block text-gray-600 dark:text-white">Username</label>
+                        <input type="text" id="username" name="username" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="mb-4">
+                        <label for="registerEmail" class="block text-gray-600 dark:text-white">Email</label>
+                        <input type="email" id="registerEmail" name="registerEmail" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="registerPassword" class="block text-gray-600 dark:text-white">Password</label>
+                        <input type="password" id="registerPassword" name="registerPassword" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" required>
+                    </div>
+                    <button id="registerSubmitButton" class="w-full submit-button hover:bg-blue-600 transition duration-300 rounded-full">Create an account</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Style Me Button -->
+        <div id="styleMeButton" class="style-me-button">
+            Style Me
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <input type="checkbox" id="darkModeToggle" class="hidden">
+        <label for="darkModeToggle" class="cursor-pointer absolute top-4 right-4">
+            <div class="w-10 h-5 bg-gray-300 rounded-full p-1 duration-300 ease-in-out">
+                <div id="toggleBall" class="w-4 h-3 bg-white rounded-full shadow-md transform translate-x-0 duration-300 ease-in-out"></div>
+            </div>
+        </label>
+    </div>
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
