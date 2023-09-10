@@ -1,0 +1,279 @@
+/* CSS Styles for Homepage */
+
+@import url(https://fonts.googleapis.com/css?family=Quattrocento+Sans);
+
+/* Global Styles */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-y: hidden;
+}
+
+/* Light Mode Styles */
+body.light {
+    background-color: white;
+    color: #333333;
+}
+
+/* Form Container Styles */
+.form-container {
+    width: 80%;
+    max-width: 400px;
+    margin: 50px;
+    padding: 20px;
+    background-color: #f3f4f6;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Dark Mode Toggle Styles */
+#darkModeToggle:checked + label #toggleBall {
+    transform: translateX(100%);
+}
+
+/* Dark Mode Styles */
+body.dark {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Customize form container background color in dark mode */
+body.dark .form-container {
+    background-color: #313131;
+}
+
+/* Dark Mode Label Styles */
+body.dark .form-container label {
+    color: #fff;
+}
+
+/* Dark Mode Input Styles */
+body.dark .form-container input {
+    color: #000;
+}
+
+/* Toggle Button Styles */
+.switch-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.toggle-button {
+    flex: 1;
+    padding: 15px 0;
+    background-color: transparent;
+    color: #FF5733;
+    border: 2px solid #FF5733;
+    cursor: pointer;
+    transition: font-weight 0.3s ease, border-color 0.3s ease;
+    outline: none;
+    text-align: center;
+    font-weight: normal;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+/* Toggle Button Active and Hover Styles */
+.toggle-button.active {
+    background-color: #FF7F00;
+    color: white;
+    border-color: #FF7F00;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.toggle-button:not(.active):hover {
+    font-weight: bold;
+    border-color: #FF5733;
+}
+
+/* Customize button colors in light and dark modes */
+.bg-light-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.bg-light-button-hover {
+    background-color: #0056b3;
+}
+
+.dark .bg-orange-button {
+    background-color: #FF7F00;
+    color: white;
+}
+
+.dark .bg-orange-button-hover {
+    background-color: #FF5733;
+}
+
+/* Customize submit button styles */
+.submit-button {
+    width: 50%;
+    padding: 10px 0;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border-radius: 9999px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Loading screen and loading text styles */
+#loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-text {
+    text-align: center;
+    width: 100%;
+    line-height: 100vh;
+    font-size: 50px;
+    font-weight: bold;
+    color: #000;
+    font-family: "Quattrocento Sans", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Dark Mode Styles */
+body.dark .loading-text {
+    font-weight: bold;
+    color: white;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 0.5px black;
+    text-fill-color: white;
+    text-stroke: 0.5px black;
+}
+
+.loading-text span {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.loading-text span:nth-child(1) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 0s infinite linear alternate;
+    animation: blur-text 1.5s 0s infinite linear alternate;
+}
+
+.loading-text span:nth-child(2) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 0.2s infinite linear alternate;
+    animation: blur-text 1.5s 0.2s infinite linear alternate;
+}
+
+.loading-text span:nth-child(3) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 0.4s infinite linear alternate;
+    animation: blur-text 1.5s 0.4s infinite linear alternate;
+}
+
+.loading-text span:nth-child(4) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 0.6s infinite linear alternate;
+    animation: blur-text 1.5s 0.6s infinite linear alternate;
+}
+
+.loading-text span:nth-child(5) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 0.8s infinite linear alternate;
+    animation: blur-text 1.5s 0.8s infinite linear alternate;
+}
+
+.loading-text span:nth-child(6) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 1s infinite linear alternate;
+    animation: blur-text 1.5s 1s infinite linear alternate;
+}
+
+.loading-text span:nth-child(7) {
+    filter: blur(0px);
+    -webkit-animation: blur-text 1.5s 1.2s infinite linear alternate;
+    animation: blur-text 1.5s 1.2s infinite linear alternate;
+}
+
+@-webkit-keyframes blur-text {
+    0% {
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(4px);
+    }
+}
+
+@keyframes blur-text {
+    0% {
+        filter: blur(0px);
+    }
+    100% {
+        filter: blur(4px);
+    }
+}
+
+/* Style Me Button Styles */
+.style-me-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Disco Animation */
+.style-me-button:hover {
+    transform: scale(1.1);
+    animation-duration: 2s;
+}
+
+.style-me-button.disco-effect {
+    animation: disco 3s infinite linear;
+}
+
+/* Dark Mode Styles for the Style Me Button */
+body.dark .style-me-button {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Disco Animation Keyframes */
+@keyframes disco {
+    0% {
+        background-color: #FF5733;
+    }
+    20% {
+        background-color: #FF7F00;
+    }
+    40% {
+        background-color: #007bff;
+    }
+    60% {
+        background-color: #4CAF50;
+    }
+    80% {
+        background-color: #FFD700;
+    }
+    100% {
+        background-color: #FF5733;
+    }
+}
